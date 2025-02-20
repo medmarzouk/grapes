@@ -60,9 +60,7 @@ export default function Login() {
                     <i className="pi pi-sign-in"></i> Login
                 </h2>
                 {error && <Message severity="error" text={error} className="mb-4" />}
-                {successMessage && (
-                    <Message severity="success" text={successMessage} className="mb-4" />
-                )}
+                {/* {successMessage } */}
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
