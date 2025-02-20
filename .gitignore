@@ -1,0 +1,32 @@
+# Ignorer les fichiers de l'environnement virtuel de Django
+Backend/myenv/
+venv/
+
+# Ignorer les dépendances Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorer les fichiers de configuration spécifiques aux IDE
+.vscode/
+.idea/
+
+# Ignorer les fichiers générés par le système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers node_modules de React
+**/node_modules/
+*/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignorer le build de React
+build/
+dist/
+
+# Ignorer les fichiers de logs
+*.log
+
+# Ignorer les fichiers de base de données SQLite (si utilisé)
+db.sqlite3
