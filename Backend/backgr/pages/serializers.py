@@ -5,5 +5,5 @@ from .models import Page
 class PageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Page
-        fields = ['id', 'title', 'slug', 'content', 'created_at', 'updated_at']
-        read_only_fields = ['id', 'created_at', 'updated_at'] # Les champs en lecture seule
+        fields = ['id', 'title', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at', 'slug'] # Les champs en lecture seule

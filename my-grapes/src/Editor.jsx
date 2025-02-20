@@ -9,7 +9,7 @@ import { topBarBlock } from './blocks/TopBarBlock';
 import { toolbarBlock } from './blocks/ToolbarBlock';
 import { formBlock } from './blocks/FormBlock';
 import { footerBlock } from './blocks/FooterBlock';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 
 
 
