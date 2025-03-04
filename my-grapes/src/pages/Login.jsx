@@ -57,7 +57,7 @@ export default function Login() {
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">
-                    <i className="pi pi-sign-in"></i> Login
+                    <i className="pi pi-sign-in"></i> Se connecter
                 </h2>
                 {error && <Message severity="error" text={error} className="mb-4" />}
                 {/* {successMessage } */}
@@ -72,12 +72,12 @@ export default function Login() {
                             value={formData.email}
                             onChange={handleChange}
                             className="w-full mt-1"
-                            placeholder="Enter your email"
+                            placeholder="Entrez votre email"
                         />
                     </div>
                     <div>
                         <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                            Password
+                            Mot de passe
                         </label>
                         <InputText
                             id="password"
@@ -91,15 +91,15 @@ export default function Login() {
                     </div>
                     <Button
                         type="submit"
-                        label={isLoading ? "Logging in..." : "Login"}
+                        label={isLoading ? "Connexion..." : "Se connecter"}
                         className="w-full bg-blue-500 hover:bg-blue-600"
                         disabled={isLoading}
                     />
                     <div className="text-center mt-4">
                         <p className="text-sm text-gray-600">
-                            Don't have an account?{" "}
+                             Vous n'avez pas de compte?{" "}
                             <Link to="/register" className="text-blue-500 hover:text-blue-600 font-medium">
-                                Register here
+                             Inscrivez-vous ici
                             </Link>
                         </p>
                     </div>

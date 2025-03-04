@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 import { Avatar } from "primereact/avatar";
 import { OverlayPanel } from "primereact/overlaypanel";
-import { Button } from "primereact/button";
 import api from "../api/Api_utils"; // Assurez-vous d'avoir une instance API configurée
 
 const Navbar = () => {
     const { user, logout } = useAuth();
     const op = useRef(null);
+    const navigate = useNavigate(); // Use useNavigate instead of Navigate
 
     const handleLogout = async () => {
         try {
@@ -45,10 +45,19 @@ const Navbar = () => {
                                     <li>
                                         <button
                                             className="w-full flex items-center space-x-2 text-left px-6 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
-                                            onClick={()  => Navigate('/')}
+                                            onClick={()  => navigate('/')} // Use navigate function
                                         >
                                             <i className="pi pi-user"></i>
                                             <span>Voir Profil</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            className="w-full flex items-center space-x-2 text-left px-6 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition duration-200"
+                                            onClick={()  =>  window.location.href = 'http://localhost:5173/chat'} // Use navigate function
+                                        >
+                                            <i className="pi pi-comments"></i>
+                                            <span>Chat</span>
                                         </button>
                                     </li>
                                     <li>

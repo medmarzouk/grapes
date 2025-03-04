@@ -61,7 +61,7 @@ export default function Register() {
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">
-                    <i className="pi pi-user-plus"></i> Register
+                    <i className="pi pi-user-plus"></i> Registre
                 </h2>
                 {error && <Message severity="error" text={error} className="mb-4" />}
                 {successMessage && (
@@ -70,7 +70,7 @@ export default function Register() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-                            Username
+                        Nom d'utilisateur
                         </label>
                         <InputText
                             id="username"
@@ -78,7 +78,7 @@ export default function Register() {
                             value={formData.username}
                             onChange={handleChange}
                             className="w-full mt-1"
-                            placeholder="Enter your username"
+                            placeholder="Entrez votre nom"
                         />
                     </div>
                     <div>
@@ -91,12 +91,12 @@ export default function Register() {
                             value={formData.email}
                             onChange={handleChange}
                             className="w-full mt-1"
-                            placeholder="Enter your email"
+                            placeholder="Entrez votre email"
                         />
                     </div>
                     <div>
                         <label htmlFor="password1" className="block text-sm font-medium text-gray-700">
-                            Password
+                        Mot de passe
                         </label>
                         <InputText
                             id="password1"
@@ -105,12 +105,12 @@ export default function Register() {
                             value={formData.password1}
                             onChange={handleChange}
                             className="w-full mt-1"
-                            placeholder="Enter your password"
+                            placeholder="Entrez votre mot de passe"
                         />
                     </div>
                     <div>
                         <label htmlFor="password2" className="block text-sm font-medium text-gray-700">
-                            Confirm Password
+                        Confirmez le mot de passe
                         </label>
                         <InputText
                             id="password2"
@@ -119,7 +119,7 @@ export default function Register() {
                             value={formData.password2}
                             onChange={handleChange}
                             className="w-full mt-1"
-                            placeholder="Confirm your password"
+                            placeholder="Confirmez votre mot de passe"
                         />
                     </div>
                     <Button
@@ -130,9 +130,9 @@ export default function Register() {
                     />
                     <div className="text-center mt-4">
                         <p className="text-sm text-gray-600">
-                            Already have an account?{" "}
+                        Vous avez déjà un compte?{" "}
                             <Link to="/login" className="text-blue-500 hover:text-blue-600 font-medium">
-                                Login here
+                                Connectez-vous ici
                             </Link>
                         </p>
                     </div>

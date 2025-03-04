@@ -39,6 +39,7 @@ urlpatterns = [
     # path('api/', include('myapp.urls')),
     path('', include('myapp.urls')),
     path('api/', include('pages.urls')),
+    path('chats/', include('chat.urls')),
     # URL pour Swagger en JSON ou YAML
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     

@@ -30,3 +30,5 @@ dist/
 
 # Ignorer les fichiers de base de données SQLite (si utilisé)
 db.sqlite3
+
+.env

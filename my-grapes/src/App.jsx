@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './components/AuthContext';
+import ChatInterface from './pages/ChatInterface';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
             </ProtectedRoute>
           } />
           <Route path="/editor/:pageId" element={<Editor />} />
-          <Route path="register" element={<Register />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/chat" element={<ChatInterface/>}></Route>
         </Routes>
       </Router>
     </AuthProvider>
