@@ -3,7 +3,7 @@ import axios from "axios";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { Message } from "primereact/message";
-import { useNavigate, Link } from "react-router-dom"; 
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
     const [formData, setFormData] = useState({
@@ -89,6 +89,11 @@ export default function Login() {
                             placeholder="Enter your password"
                         />
                     </div>
+                    <p className="text-sm text-gray-600 mt-2">
+                        <Link to="/forgot-password" className="text-blue-500 hover:text-blue-600">
+                            Mot de passe oublié ?
+                        </Link>
+                    </p>
                     <Button
                         type="submit"
                         label={isLoading ? "Connexion..." : "Se connecter"}
@@ -97,11 +102,12 @@ export default function Login() {
                     />
                     <div className="text-center mt-4">
                         <p className="text-sm text-gray-600">
-                             Vous n'avez pas de compte?{" "}
+                            Vous n'avez pas de compte?{" "}
                             <Link to="/register" className="text-blue-500 hover:text-blue-600 font-medium">
-                             Inscrivez-vous ici
+                                Inscrivez-vous ici
                             </Link>
                         </p>
+
                     </div>
                 </form>
             </div>

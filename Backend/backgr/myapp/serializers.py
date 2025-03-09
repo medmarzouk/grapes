@@ -43,3 +43,17 @@ class UserLoginSerializer(serializers.Serializer):
         if user and user.is_active:
             return user
         raise serializers.ValidationError("Incorrect Credentials!")
+# serializers.py
+class PasswordResetRequestSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+
+class PasswordResetConfirmSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    reset_code = serializers.CharField(max_length=6)
+    new_password = serializers.CharField(write_only=True)
+    confirm_password = serializers.CharField(write_only=True)
+
+    def validate(self, data):
+        if data['new_password'] != data['confirm_password']:
+            raise serializers.ValidationError("Les mots de passe ne correspondent pas")
+        return data

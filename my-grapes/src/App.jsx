@@ -11,6 +11,9 @@ import Register from './pages/Register';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './components/AuthContext';
 import ChatInterface from './pages/ChatInterface';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
@@ -25,7 +28,10 @@ function App() {
           } />
           <Route path="/editor/:pageId" element={<Editor />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/chat" element={<ChatInterface/>}></Route>
+          <Route path="/chat" element={<ChatInterface />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/Home" element={<HomePage />} />
         </Routes>
       </Router>
     </AuthProvider>

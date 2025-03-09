@@ -20,7 +20,9 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     username = models.CharField(max_length=200, unique=True)
     email = models.EmailField(unique=True)
-    
+    reset_code = models.CharField(max_length=6, null=True, blank=True)
+    reset_code_expiration = models.DateTimeField(null=True, blank=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
